@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Want To Make a Meme?</title>
+  <link rel="stylesheet" href="css/finalmemegenerator.css">
+    </head>
+      <body>
+
+           <div id= "container">
+                  <h1>Welcome to the Meme Generator!</h1>
+              <h1>To make a meme, please fill in the fields below:</h1>
+      <h3><label for="image-input"> Copy Image URL Address:</label> <input type="url" name="url" id="image-input" placeholder="https://example.com" pattern="https://.*" size="30" required><button id="b" onclick = "myFunction()">Enter</button></h3>
+      <br>
+        <p>
+       <h3><label for = "upper_user_text"> Enter Upper Meme Text Here:</label><input type = "text" id="upper_user_text" oninput="update_upper_text()" maxlength="70"></h3>
+        </p>
+        <p>
+       <h3><label for = "lower_user_text"> Enter Lower Meme Text Here:</label> <input type = "text" id="lower_user_text" oninput="update_lower_text()" maxlength="70"></h3>
+       
+        <br>
+     
+      <div id="upper_meme_text">&nbsp;</div>
+      <div id="lower_meme_text">&nbsp;</div>
+      <div id ="meme_picture"><img src = "" id = "image" class = "marginauto" width = "400" height = "400"></div>
+      <br>
+       <h3>Do you want to save this meme, or delete it?</h3>
+      <br>
+       <h3><input type="radio" type = "file" name = "answer" id="save_btn">Save My Meme</h3>
+       <h3><input type="radio" name = "answer" id="delete_btn">Delete This Meme</h3>
+       <br> 
+<!--  <div id = "savedmemes"><canvas id="meme-canvas"></canvas></div> -->
+       </div>
+ <script src="js/finalmemegenerator.js"></script>
+    </body>
+</html>
